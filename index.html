@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Green Navbar</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #81d684;
+    }
+
+    .navbar {
+      background-color: #4CAF50; /* Green color */
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+      transition: transform 0.3s ease-in-out; /* Smooth transition for side menu effect */
+      justify-content: space-around;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 10px;
+      margin: 10px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .navbar a:hover {
+      background-color: #45a049; /* Darker green color on hover */
+    }
+
+    .toggle-button{
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        color: black;
+        cursor: pointer;
+    }
+
+    h1{
+        text-align: center;
+        color: white;
+        padding-top: 0px;
+        font-size: 3em;
+    }
+
+    .main-section{
+        background-color: #4CAF50;
+
+    }
+
+    .heading{
+        background-color: #22a328;
+        text-align: center;
+    }
+
+    .heading p{
+        text-align: center;
+        font-weight: bold;
+        color: #1b611f;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .heading img{
+        height: 200px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .main-1{
+        background-color: #61ff69;
+        text-align: center;
+    }
+
+    /* Responsive styles */
+    /* Responsive styles */
+@media (max-width: 600px) {
+  .navbar {
+    transform: translateX(-100%); /* Move the navbar off-screen by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%; /* Adjust the width of the side menu */
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  .navbar.show {
+    transform: translateX(0); /* Bring the navbar on-screen when the 'show' class is applied */
+  }
+
+  .navbar a {
+    display: block;
+    /* width: 100%;  */
+    /* border-top: 1px solid #ddd; */
+  }
+
+  .toggle-button {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .main-section{
+    
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="navbar" id="myNavbar">
+        <div class="logos" style="margin-bottom: -40px;">
+            <img src="images/logos.png" alt="" width="200px">
+        </div>
+
+        <a href="#">Home</a>
+        <a href="#">About Me</a>
+        <a href="#">Manifesto</a>
+        <a href="#">Contact Me</a>
+      </div>
+      <div class="toggle-btn">
+        <div class="toggle-button" onclick="toggleNavbar()">&#9776;</div>
+      </div>
+</div>
+
+    <div class="heading">
+        <div>
+            <img src="images/salam-1.png" alt="" >
+            <h1> Bashar <br>Abdulsalam <br> Kolade</h1>
+            <p>...man of the people</p>
+        </div>
+    </div>
+
+    
+
+<!-- Your page content goes here -->
+
+<script>
+  function toggleNavbar() {
+    var navbar = document.getElementById("myNavbar");
+    navbar.classList.toggle("show");
+  }
+</script>
+
+</body>
+</html>
